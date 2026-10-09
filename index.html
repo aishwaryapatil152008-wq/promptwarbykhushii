@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VAJRA | Smart City Explorer</title>
+    <meta name="description" content="VAJRA helps you explore city attractions, local food, culture, safety and urban insights.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <img src="vajra-logo.jpeg" alt="VAJRA trident logo"
+                 class="brand-logo"
+                 onerror="this.style.display='none'">
+            <div class="brand-text">
+                <h2>VAJRA</h2>
+                <p>SMART CITY EXPLORER</p>
+            </div>
+        </div>
+
+        <p class="side-label">MAIN MENU</p>
+
+        <nav>
+            <button class="nav-link active" data-page="home">⌂ &nbsp; Dashboard</button>
+            <button class="nav-link" data-page="explore">⌖ &nbsp; Explore City</button>
+            <button class="nav-link" data-page="food">☕ &nbsp; Food & Cafés</button>
+            <button class="nav-link" data-page="culture">⌘ &nbsp; History & Culture</button>
+            <button class="nav-link" data-page="safety">🛡 &nbsp; Safety Center</button>
+            <button class="nav-link" data-page="traffic">↗ &nbsp; Traffic & Weather</button>
+            <button class="nav-link" data-page="reports">＋ &nbsp; Citizen Reports</button>
+            <button class="nav-link" data-page="assistant">✦ &nbsp; CityMate AI</button>
+            <button class="nav-link" data-page="saved">♡ &nbsp; Saved Places</button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="help-box">
+                <h3>Explore smarter.</h3>
+                <p>Discover new places and plan your next city adventure.</p>
+                <button class="primary-btn full-width" data-page="assistant">
+                    Ask CityMate →
+                </button>
+            </div>
+
+            <div class="profile">
+                <span>🌆 &nbsp; City Explorer</span><br>
+                <small>Welcome to VAJRA</small>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+            <div class="location">
+                <small>YOUR CITY</small>
+                <strong>📍 Pune, Maharashtra</strong>
+            </div>
+
+            <input id="globalSearch" type="search"
+                   placeholder="Search places, food, landmarks..."
+                   aria-label="Search all places">
+
+            <div class="weather">
+                ☀️ <span>City Explorer</span>
+                <small>Demo mode</small>
+            </div>
+        </header>
+
+        <!-- DASHBOARD PAGE -->
+        <section class="page active" id="home">
+
+            <div class="welcome">
+                <div>
+                    <p class="eyebrow">YOUR CITY. YOUR EXPERIENCE.</p>
+                    <h1>Explore your city<br>the <span>smarter way.</span></h1>
+                    <p>Discover hidden gems, experience local culture and explore with confidence.</p>
+                </div>
+
+                <button class="primary-btn" data-page="explore">
+                    Explore the City ↗
+                </button>
+            </div>
+
+            <div class="hero-grid">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>City Explorer Map</h2>
+                            <p>Explore sample locations around Pune</p>
+                        </div>
+                        <span class="status">● DEMO MAP</span>
+                    </div>
+
+                    <div class="map">
+                        <div class="river"></div>
+                        <div class="map-road road-one"></div>
+                        <div class="map-road road-two"></div>
+                        <div class="map-road road-three"></div>
+
+                        <span class="map-label label-one">CITY CENTRE</span>
+                        <span class="map-label label-two">NORTH PUNE</span>
+                        <span class="map-label label-three">GREEN ZONE</span>
+
+                        <button class="map-pin pin-one" data-place="Shaniwar Wada" aria-label="Shaniwar Wada">🏛</button>
+                        <button class="map-pin pin-two" data-place="Aga Khan Palace" aria-label="Aga Khan Palace">📍</button>
+                        <button class="map-pin pin-three" data-place="Saras Baug" aria-label="Saras Baug">🌳</button>
+                        <button class="map-pin pin-four" data-place="Food district" aria-label="Food district">🍴</button>
+                    </div>
+
+                    <div class="map-footer">
+                        <span>🔵 Attractions</span>
+                        <span>🟢 Parks</span>
+                        <span>🔴 Food spots</span>
+                        <span>Sample locations only</span>
+                    </div>
+                </div>
+
+                <div class="panel ai-panel">
+                    <div class="ai-icon">✦</div>
+                    <span class="tag">YOUR CITY COMPANION</span>
+                    <h2>Meet CityMate AI</h2>
+                    <p>Get ideas for budget outings, discover cultural places and plan a city adventure.</p>
+                    <button class="light-btn" data-page="assistant">
+                        Chat with CityMate →
+                    </button>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <div>
+                    <p class="eyebrow">DISCOVER MORE</p>
+                    <h2>Explore by category</h2>
+                </div>
+            </div>
+
+            <div class="category-grid">
+                <button class="category-card" data-go="food">
+                    <span>🍜</span>
+                    <strong>Food & Cafés</strong>
+                    <small>Local flavours and cafés</small>
+                </button>
+
+                <button class="category-card" data-go="culture">
+                    <span>🏛️</span>
+                    <strong>History & Culture</strong>
+                    <small>Heritage and traditions</small>
+                </button>
+
+                <button class="category-card" data-go="safety">
+                    <span>🛡️</span>
+                    <strong>Safety Center</strong>
+                    <small>Safety guidance and reports</small>
+                </button>
+
+                <button class="category-card" data-go="traffic">
+                    <span>🌦️</span>
+                    <strong>City Insights</strong>
+                    <small>Traffic and weather guidance</small>
+                </button>
+            </div>
+
+            <div class="section-title">
+                <div>
+                    <p class="eyebrow">HANDPICKED FOR YOU</p>
+                    <h2>Popular places</h2>
+                </div>
+                <button class="text-btn" data-page="explore">View all →</button>
+            </div>
+
+            <div class="places-grid" id="homePlaces"></div>
+        </section>
+
+        <!-- EXPLORE PAGE -->
+        <section class="page" id="explore">
+            <div class="page-heading">
+                <p class="eyebrow">DISCOVER YOUR NEXT ADVENTURE</p>
+                <h1>Explore <span>the city.</span></h1>
+                <p>Search, filter and compare places based on your interests.</p>
+            </div>
+
+            <div class="filter-bar">
+                <input id="placeSearch" type="search" placeholder="Search places or neighbourhoods...">
+
+                <select id="categoryFilter" aria-label="Filter category">
+                    <option value="all">All categories</option>
+                    <option value="food">Food & Cafés</option>
+                    <option value="culture">History & Culture</option>
+                    <option value="nature">Parks & Nature</option>
+                </select>
+
+                <select id="sortFilter" aria-label="Sort places">
+                    <option value="recommended">Recommended</option>
+                    <option value="rating">Highest rated</option>
+                    <option value="price">Lowest estimated cost</option>
+                </select>
+            </div>
+
+            <div class="notice warning">
+                ℹ️ Place ratings, prices and descriptions are illustrative demo data.
+                Verify details before travelling.
+            </div>
+
+            <div class="places-grid" id="explorePlaces"></div>
+        </section>
+
+        <!-- FOOD PAGE -->
+        <section class="page" id="food">
+            <div class="page-heading">
+                <p class="eyebrow">A TASTE OF THE CITY</p>
+                <h1>Food & <span>Cafés.</span></h1>
+                <p>Discover sample food destinations and café areas around Pune.</p>
+            </div>
+            <div class="places-grid" id="foodPlaces"></div>
+        </section>
+
+        <!-- CULTURE PAGE -->
+        <section class="page" id="culture">
+            <div class="page-heading">
+                <p class="eyebrow">STORIES BEHIND EVERY STREET</p>
+                <h1>History & <span>Culture.</span></h1>
+                <p>Explore heritage landmarks and discover the city's cultural identity.</p>
+            </div>
+            <div class="places-grid" id="culturePlaces"></div>
+        </section>
+
+        <!-- SAFETY PAGE -->
+        <section class="page" id="safety">
+            <div class="page-heading">
+                <p class="eyebrow">TRAVEL WITH AWARENESS</p>
+                <h1>Safety <span>Center.</span></h1>
+                <p>Use trusted sources and citizen reports to make informed travel decisions.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span>🛡️</span>
+                    <h3>Safety resources</h3>
+                    <strong>Stay informed</strong>
+                    <small>Check verified local advisories.</small>
+                </div>
+                <div class="stat-card">
+                    <span>📍</span>
+                    <h3>Area awareness</h3>
+                    <strong>Plan ahead</strong>
+                    <small>Research your destination.</small>
+                </div>
+                <div class="stat-card">
+                    <span>🚨</span>
+                    <h3>Emergency help</h3>
+                    <strong>112</strong>
+                    <small>India's emergency response number.</small>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>Smart safety checklist</h2>
+                <ul class="tips">
+                    <li>Check official police and local authority advisories.</li>
+                    <li>Prefer well-lit, public routes when appropriate.</li>
+                    <li>Check traffic conditions before leaving.</li>
+                    <li>Never treat an unverified citizen report as confirmed danger.</li>
+                    <li>For emergencies in India, call 112.</li>
+                </ul>
+                <button class="primary-btn" data-page="reports">Submit a citizen report →</button>
+            </div>
+
+            <div class="notice warning">
+                This prototype has no verified live safety database.
+                It does not identify or certify unsafe locations.
+            </div>
+        </section>
+
+        <!-- TRAFFIC AND WEATHER PAGE -->
+        <section class="page" id="traffic">
+            <div class="page-heading">
+                <p class="eyebrow">UNDERSTAND YOUR CITY</p>
+                <h1>Traffic & <span>Weather.</span></h1>
+                <p>Find guidance for planning your trip and checking current conditions.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span>🚗</span>
+                    <h3>Traffic</h3>
+                    <strong>Live feed unavailable</strong>
+                    <small>Open a navigation app for live congestion.</small>
+                </div>
+                <div class="stat-card">
+                    <span>🌤️</span>
+                    <h3>Weather</h3>
+                    <strong>Live feed unavailable</strong>
+                    <small>Check a weather service for current conditions.</small>
+                </div>
+                <div class="stat-card">
+                    <span>🧭</span>
+                    <h3>Trip planning</h3>
+                    <strong>Plan ahead</strong>
+                    <small>Allow extra time during busy periods.</small>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>Useful city resources</h2>
+                <p>These links open external services. VAJRA does not receive live data from them in this demo.</p>
+                <div class="resource-links">
+                    <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Google Maps ↗</a>
+                    <a href="https://mausam.imd.gov.in/" target="_blank" rel="noopener noreferrer">India Meteorological Department ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CITIZEN REPORTS PAGE -->
+        <section class="page" id="reports">
+            <div class="page-heading">
+                <p class="eyebrow">YOUR CITY. YOUR VOICE.</p>
+                <h1>Citizen <span>Reports.</span></h1>
+                <p>Share observations about places, cleanliness, traffic or safety.</p>
+            </div>
+
+            <div class="panel form-panel">
+                <h2>Submit a report</h2>
+
+                <form id="reportForm">
+                    <label for="reportType">Report category</label>
+                    <select id="reportType" required>
+                        <option value="">Select a category</option>
+                        <option value="Traffic">Traffic</option>
+                        <option value="Cleanliness">Cleanliness</option>
+                        <option value="Safety concern">Safety concern</option>
+                        <option value="Weather">Weather</option>
+                        <option value="Accessibility">Accessibility</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="reportLocation">Location or area</label>
+                    <input id="reportLocation" type="text"
+                           placeholder="e.g. FC Road, Pune" required maxlength="120">
+
+                    <label for="reportDescription">What did you observe?</label>
+                    <textarea id="reportDescription" rows="4"
+                              placeholder="Describe the issue clearly..." required maxlength="1000"></textarea>
+
+                    <button class="primary-btn" type="submit">Submit report →</button>
+                </form>
+
+                <p class="form-note">
+                    
+                </p>
+            </div>
+
+            <div class="panel">
+                <h2>Reports in this session</h2>
+                <div id="reportList">
+                    <p>No reports submitted yet.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CITYMATE AI PAGE -->
+        <section class="page" id="assistant">
+            <div class="page-heading">
+                <p class="eyebrow">YOUR PERSONAL CITY COMPANION</p>
+                <h1>Meet <span>CityMate.</span></h1>
+                <p>Ask for sample itineraries, food ideas, heritage attractions and travel tips.</p>
+            </div>
+
+            <div class="chat-panel">
+                <div class="chat-header">
+                    <div class="ai-icon">✦</div>
+                    <div>
+                        <strong>CityMate Assistant</strong>
+                        <small>Interactive demo assistant · Not a live AI model</small>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chatMessages" aria-live="polite">
+                    <div class="bot-message">
+                        Hello! 👋 Welcome to VAJRA. Ask me about budget places,
+                        food, history or planning a one-day trip around Pune.
+                    </div>
+                </div>
+
+                <div class="quick-prompts">
+                    <button data-prompt="Plan a one-day trip">One-day trip</button>
+                    <button data-prompt="Find budget-friendly places">Budget places</button>
+                    <button data-prompt="Suggest local food">Local food</button>
+                    <button data-prompt="Tell me about historical places">Heritage places</button>
+                    <button data-prompt="How can I travel safely?">Safety tips</button>
+                </div>
+
+                <form class="chat-form" id="chatForm">
+                    <input id="chatInput" type="text"
+                           placeholder="Ask CityMate something..."
+                           autocomplete="off" maxlength="500" required>
+                    <button class="primary-btn" type="submit">Send ↗</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- SAVED PLACES PAGE -->
+        <section class="page" id="saved">
+            <div class="page-heading">
+                <p class="eyebrow">YOUR PERSONAL COLLECTION</p>
+                <h1>Saved <span>Places.</span></h1>
+                <p>Keep your favourite city destinations in one place.</p>
+            </div>
+
+            <div class="places-grid" id="savedPlaces"></div>
+            <div class="panel" id="savedEmpty">
+                <h2>No saved places yet</h2>
+                <p>Visit Explore City and tap the heart icon on a place to save it.</p>
+                <button class="primary-btn" data-page="explore">Explore places →</button>
+            </div>
+        </section>
+
+        <footer>
+            © 2026 VAJRA · Smart City Explorer · Prototype
+        </footer>
+    </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
