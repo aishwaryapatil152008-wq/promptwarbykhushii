@@ -38,8 +38,7 @@ VAJRA-Smart-City-Explorer/
 │
 ├── index.html       # 🏠 Main webpage
 ├── style.css        # 🎨 Website styling
-├── script.js        # ⚡ Interactive features
-├── vajra-logo.png   # 🔱 VAJRA logo (if included)
+├── script.js        # ⚡ Interactive features  
 └── README.md        # 📘 Project documentation
 ```
 
